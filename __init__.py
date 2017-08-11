@@ -43,15 +43,10 @@ class MedicationSkill(MycroftSkill):
                 # json.loads takes in only binary or string variables so using content to fetch binary content
                 # Loads (Load String) takes a Json file and converts into python data structure (dict or list, depending on JSON)
                 x = json.loads(myResponse.content.decode('utf-8'))
-                print(x)
-                print("\n")
-                print (x['rows'][0]['Systolic'])
-                #Systolic = x['rows'][0]['Systolic']
-                #Diastolic = x['rows'][0]['Diastolic']
                 Medication = x['rows'][0]['Force']
                 print("\n")
                # print (x['rows'][0]['Diastolic'])
-                self.speak_dialog("your Medication level is ", {"Medication": Medication})
+                self.speak_dialog("Medication", {"Medication": Medication})
             else:
                 return
         except:
