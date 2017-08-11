@@ -1,0 +1,7 @@
+{
+	"utterance":"Medication",
+	"intent_type": "MedicationIntent",
+	"intent": {
+	  "Medication": "Medication"
+	}
+}
